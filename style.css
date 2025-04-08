@@ -1,0 +1,152 @@
+* {
+    color: white;
+    font-family: sans-serif;
+    transition: 0.2s ease-in-out;
+    user-select: none;
+}
+
+body {
+    background-color: #252A34;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    text-align: center;
+    padding-top: 5vh;
+}
+
+.container {
+    width: 170px;
+    height: 110px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+}
+
+.container h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.container .box {
+    border: 3px solid white;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 85px;
+    height: 40px;
+    background-color: #A8C686;
+    z-index: -1;
+    transition: left 0.2s ease-in-out;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    height: 250px;
+    width: 250px;
+    margin: 50px auto;
+    border: 3px solid white;
+    text-align: center;
+}
+
+.main-box-align {
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-box-align:hover {
+    background-color: #A8C686;
+}
+
+#play-again {
+    background-color: #A8C686;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+}
+
+#play-again:hover {
+    padding: 10px 40px;
+    background-color: #A8C686;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 150px;
+        height: 100px;
+    }
+
+    .container .box {
+        font-size: 1.4rem;
+    }
+
+    .main-grid {
+        height: 200px;
+        width: 200px;
+    }
+
+    .main-box-align {
+        font-size: 1.6rem;
+    }
+
+    #play-again {
+        font-size: 1rem;
+        padding: 8px 20px;
+    }
+
+    #play-again:hover {
+        padding: 8px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 130px;
+        height: 90px;
+    }
+
+    .container .box {
+        font-size: 1.2rem;
+    }
+
+    .main-grid {
+        height: 150px;
+        width: 150px;
+    }
+
+    .main-box-align {
+        font-size: 1.4rem;
+    }
+
+    #play-again {
+        font-size: 0.9rem;
+        padding: 6px 15px;
+    }
+
+    #play-again:hover {
+        padding: 6px 25px;
+    }
+}
